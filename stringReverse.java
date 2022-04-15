@@ -14,8 +14,7 @@ public class stringReverse {
 
     public static String revStr(String str)
     {
-        if (str.isEmpty())
-            return str;
+        if (str.isEmpty()) {return str;}
 
         return revStr(str.substring(1)) + str.charAt(0);
     }
