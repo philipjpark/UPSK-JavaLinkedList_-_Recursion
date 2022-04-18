@@ -16,24 +16,24 @@ class singlyLinkedListReverse {
         this.root = null;
     }
 
-    public void add(int num) {
+    public void add(int n) {
         if (root == null) {
-            root = new Node(num);
+            root = new Node(n);
             return;
         }
 
         Node head = root;
         while (head.next != null) 
          head = head.next;
-         head.next = new Node(num);
+         head.next = new Node(n);
     }
 
     public void print() {
-        Node current = root;
-        while (current != null) {
-            System.out.print(current.data + " ");
+        Node curr = root;
+        while (curr != null) {
+            System.out.print(curr.data + " ");
 
-            current = current.next;
+            curr = curr.next;
         }
 
      System.out.println();
@@ -66,10 +66,11 @@ class singlyLinkedListReverse {
             singList.add(sc.nextInt());
             i++;
         }
-       sc.close();
+       
 
         singList.print();
         singList.reverse();
         singList.print();
+        sc.close();
     }
 }
